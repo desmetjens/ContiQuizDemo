@@ -1,0 +1,35 @@
+﻿body {
+}
+
+.container {
+    padding: 5%;
+}
+
+.logo {
+    display: block;
+    width: 75%;
+    margin: 3em auto;
+}
+
+p.title {
+    font-size: 120%;
+}
+
+label.introData {
+    color: #999;
+    margin-left: 5%;
+}
+
+p {
+    line-height: .4em;
+}
+
+.startQuiz {
+    position: absolute;
+    bottom:5px;
+    width: 90%;
+}
+
+.answers {
+    margin-top:3em
+}
