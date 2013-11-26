@@ -1,6 +1,7 @@
 ﻿$(function () {
     var viewModel = new AppViewModel(Quiz);
     ko.applyBindings(viewModel);
+	document.addEventListener("deviceready", onDeviceReady, false);
 });
 
 function AppViewModel(data) {
@@ -15,3 +16,9 @@ function AppViewModel(data) {
 
 }
 
+function onDeviceReady(){
+	$("btnExit").click(function(){
+		if(navigator)
+			navigator.app.exitApp();
+	});
+}
