@@ -1,0 +1,55 @@
+﻿body {
+}
+
+.container {
+    padding: 5%;
+    padding-top: 70px;
+}
+
+.logo {
+    display: block;
+    width: 75%;
+    margin: 3em auto;
+}
+
+p.title {
+    font-size: 120%;
+}
+
+label.introData {
+    color: #999;
+    margin-left: 5%;
+}
+
+p {
+    line-height: .4em;
+}
+
+.startQuiz {
+    position: absolute;
+    bottom: 5px;
+    width: 90%;
+}
+
+.answers {
+    margin-top: 3em;
+}
+
+header {
+    text-align: center;
+}
+
+    header.navbar-default {
+        background-color: #FF3D0D;
+        background-image: none;
+        color: whitesmoke;
+    }
+
+.btn {
+    width: 90%;
+    color: whitesmoke !important;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+}
