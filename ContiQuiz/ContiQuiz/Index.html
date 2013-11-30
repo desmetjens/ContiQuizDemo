@@ -10,13 +10,15 @@
     <link rel="stylesheet" href="Content/jquery.mobile.theme-1.3.2.min.css">
     <link rel="stylesheet" href="Content/bootstrap.min.css">
     <link rel="stylesheet" href="Content/bootstrap-theme.min.css">
-    <link href='http://fonts.googleapis.com/css?family=Raleway:200' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="Content/App/Intro.css">
+    <link rel="stylesheet" href="Content/themes/ContiQuiz.min.css" />
 
     <script src="Scripts/jquery-2.0.3.min.js"></script>
     <script src="Scripts/App.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
     <script src="Scripts/jquery.mobile-1.3.2.min.js"></script>
+    <script src="phonegap.js"></script>
 </head>
 <body>
 
@@ -29,18 +31,16 @@
                 <img src="Content/images/CONTINUUM.png" alt="Continuum Logo" />
             </div>
             <div>
-                <p class="title">Quiz</p>
-                <label class="introData">.NET Sollicitanten</label>
+                <h2>Quiz</h2>
+                <p class="introData">.NET Sollicitanten</p>
             </div>
             <div>
-                <p class="title">Name</p>
-                <label class="introData">Jens Desmet</label>
+                <h2>Name</h2>
+                <p class="introData">Jens Desmet</p>
             </div>
             <footer class="navbar navbar-fixed-bottom">
                 <a href="#question1" class="center-block  btn btn-success btn-lg" data-transition="slide">Start Quiz</a>
             </footer>
-
-
         </section>
     </section>
     <section data-role="page" id="question1">
@@ -49,228 +49,189 @@
         </header>
         <section data-role="content" class="container">
             <div>
-                <p class="title">Datatypes</p>
-                <label class="introData">Are bool and Boolean equivalent?</label>
+                <h2>Datatypes</h2>
+                <p class="introData">Are bool and Boolean equivalent?</p>
             </div>
-
             <div data-role="controlgroup" class="answers">
-                <input type="radio" data-theme="a" name="radio-choice-v-2" id="radio-choice-v-2a" value="1" checked="checked">
+                <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2a" value="1">
                 <label for="radio-choice-v-2a">Yes</label>
-                <input type="radio" data-theme="a" name="radio-choice-v-2" id="radio-choice-v-2b" value="2">
+                <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2b" value="2">
                 <label for="radio-choice-v-2b">No, bool is a value type and Boolean is a reference type</label>
-                <input type="radio" data-theme="a" name="radio-choice-v-2" id="radio-choice-v-2c" value="3">
+                <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2c" value="3">
                 <label for="radio-choice-v-2c">No, Boolean doesn't exist in C#</label>
             </div>
         </section>
-        <!--  <footer class="navbar navbar-default navbar-fixed-bottom navbar-inverse">
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="#" data-direction="reverse" data-transition="slide"><span class="glyphicon glyphicon-arrow-left"></span>Previous</a></li>
+        <footer data-role="footer" data-position="fixed">
+            <nav data-role="navbar">
+                <ul>
+                    <li><a href="#" class="disabled"><span class="glyphicon glyphicon-arrow-left"></span>Previous</a></li>
                     <li><a href="#overview" data-transition="slideup"><span class="glyphicon glyphicon-list"></span>Overview</a></li>
                     <li><a href="#question2" data-iconpos="right" data-transition="slide">Next <span class="glyphicon glyphicon-arrow-right"></span></a></li>
                 </ul>
-            </div>
-
-        </footer>
-        -->
-        <section data-role="footer" data-position="fixed">
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <nav data-role="navbar" >
-                <ul>
-                    <li><a href="#" class="disabled"><span class="glyphicon glyphicon-arrow-left"></span> Previous</a></li>
-                    <li><a href="#overview" data-transition="slideup"><span class="glyphicon glyphicon-list"></span> Overview</a></li>
-                    <li><a href="#question2" data-iconpos="right" data-transition="slide">Next <span class="glyphicon glyphicon-arrow-right"></span></a></li>
-                </ul>
             </nav>
-            <!-- /.navbar-collapse -->
-        </section>
-
-
-
+        </footer>
     </section>
     <section data-role="page" id="question2">
-        <header data-role="header" data-position="fixed">
+        <header class="navbar navbar-default navbar-fixed-top">
             <h1>ContiQuiz</h1>
         </header>
         <section data-role="content" class="container">
             <div>
-                <p class="title">Object initialization</p>
-                <label class="introData">int[] myArray = new int[10]; What will be the value of myArray[1]?</label>
+                <h2>Object initialization</h2>
+                <p class="introData">int[] myArray = new int[10]; What will be the value of myArray[1]?</p>
             </div>
 
             <div data-role="controlgroup" class="answers">
-                <input type="radio" data-theme="a" name="radio-choice-v-2" data-theme="a" id="radio1" value="1">
+                <input type="radio" name="radio-choice-v-2" id="radio1" value="1">
                 <label for="radio1">0</label>
-                <input type="radio" data-theme="a" name="radio-choice-v-2" id="radio2" value="2">
+                <input type="radio" name="radio-choice-v-2" id="radio2" value="2">
                 <label for="radio2">10</label>
-                <input type="radio" data-theme="a" name="radio-choice-v-2" id="radio3" value="3">
+                <input type="radio" name="radio-choice-v-2" id="radio3" value="3">
                 <label for="radio3">null</label>
-                <input type="radio" data-theme="a" name="radio-choice-v-2" id="radio4" value="4">
+                <input type="radio" name="radio-choice-v-2" id="radio4" value="4">
                 <label for="radio4">A null reference exception woulde be thrown unless myArray[1] is first initialized to a value.</label>
             </div>
         </section>
         <footer data-role="footer" data-position="fixed">
-            <div data-role="navbar">
+            <nav data-role="navbar">
                 <ul>
-                    <li><a href="#question1" data-direction="reverse" data-icon="arrow-l" data-transition="slide" data-role="button" data-theme="d">Previous</a></li>
-                    <li><a href="#question3" data-icon="arrow-r" data-iconpos="right" data-transition="slide" data-role="button" data-theme="d">Next</a></li>
+                    <li><a href="#question1" data-transition="slide" data-direction="reverse"><span class="glyphicon glyphicon-arrow-left"></span>Previous</a></li>
+                    <li><a href="#overview" data-transition="slideup"><span class="glyphicon glyphicon-list"></span>Overview</a></li>
+                    <li><a href="#question3" data-iconpos="right" data-transition="slide">Next <span class="glyphicon glyphicon-arrow-right"></span></a></li>
                 </ul>
-            </div>
-            <div data-role="navbar">
-                <ul>
-                    <li><a href="#overview" data-icon="bars" data-transition="slideup" data-role="button" data-theme="d">Overview</a></li>
-                </ul>
-            </div>
+            </nav>
         </footer>
     </section>
     <section data-role="page" id="question3">
-        <header data-role="header" data-position="fixed">
+        <header class="navbar navbar-default navbar-fixed-top">
             <h1>ContiQuiz</h1>
         </header>
         <section data-role="content" class="container">
             <div>
-                <p class="title">Varia</p>
-                <label class="introData">Who invented C#?</label>
+                <h2>Varia</h2>
+                <p class="introData">Who invented C#?</p>
             </div>
 
-            <div data-role="controlgroup" data-theme="a" class="answers">
-                <input type="radio" data-theme="a" name="radio-choice-v-2" id="radio5" value="1">
+            <div data-role="controlgroup" class="answers">
+                <input type="radio" name="radio-choice-v-2" id="radio5" value="1">
                 <label for="radio5">Sun Microsystems invented Java; Java was then licenced by Microsoft and released as C#</label>
-                <input type="radio" data-theme="a" name="radio-choice-v-2" id="radio6" value="2">
+                <input type="radio" name="radio-choice-v-2" id="radio6" value="2">
                 <label for="radio6">Apple invented C++; C++ was then licenced by Microsoft and released as C#</label>
-                <input type="radio" data-theme="a" name="radio-choice-v-2" id="radio7" value="3">
+                <input type="radio" name="radio-choice-v-2" id="radio7" value="3">
                 <label for="radio7">Bill Gates</label>
-                <input type="radio" data-theme="a" name="radio-choice-v-2" id="radio8" value="4">
+                <input type="radio" name="radio-choice-v-2" id="radio8" value="4">
                 <label for="radio8">Microsoft</label>
             </div>
         </section>
         <footer data-role="footer" data-position="fixed">
-            <div data-role="navbar">
+            <nav data-role="navbar">
                 <ul>
-                    <li><a href="#question2" data-direction="reverse" data-icon="arrow-l" data-transition="slide" data-role="button" data-theme="d">Previous</a></li>
-                    <li><a href="#question4" data-icon="arrow-r" data-iconpos="right" data-transition="slide" data-role="button" data-theme="d">Next</a></li>
+                    <li><a href="#question2" data-transition="slide" data-direction="reverse"><span class="glyphicon glyphicon-arrow-left"></span>Previous</a></li>
+                    <li><a href="#overview" data-transition="slideup"><span class="glyphicon glyphicon-list"></span>Overview</a></li>
+                    <li><a href="#question4" data-iconpos="right" data-transition="slide">Next <span class="glyphicon glyphicon-arrow-right"></span></a></li>
                 </ul>
-            </div>
-            <div data-role="navbar">
-                <ul>
-                    <li><a href="#overview" data-icon="bars" data-transition="slideup" data-role="button" data-theme="d">Overview</a></li>
-                </ul>
-            </div>
+            </nav>
         </footer>
     </section>
     <section data-role="page" id="question4">
-        <header data-role="header" data-position="fixed">
+        <header class="navbar navbar-default navbar-fixed-top">
             <h1>ContiQuiz</h1>
         </header>
         <section data-role="content" class="container">
             <div>
-                <p class="title">Compile</p>
-                <label class="introData">What is the output of Console.WriteLine(10L / 3 == 10d / 3);?</label>
+                <h2>Compile</h2>
+                <p class="introData">What is the output of Console.WriteLine(10L / 3 == 10d / 3);?</p>
             </div>
 
-            <div data-role="controlgroup" data-theme="a" class="answers">
-                <input type="radio" data-theme="a" name="radio-choice-v-2" id="radio9" value="1">
+            <div data-role="controlgroup" class="answers">
+                <input type="radio" name="radio-choice-v-2" id="radio9" value="1">
                 <label for="radio9">True</label>
-                <input type="radio" data-theme="a" name="radio-choice-v-2" id="radio10" value="2">
+                <input type="radio" name="radio-choice-v-2" id="radio10" value="2">
                 <label for="radio10">False</label>
-                <input type="radio" data-theme="a" name="radio-choice-v-2" id="radio11" value="3">
+                <input type="radio" name="radio-choice-v-2" id="radio11" value="3">
                 <label for="radio11">Nothing, you will get a compiler error</label>
             </div>
         </section>
         <footer data-role="footer" data-position="fixed">
-            <div data-role="navbar">
+            <nav data-role="navbar">
                 <ul>
-                    <li><a href="#question3" data-direction="reverse" data-icon="arrow-l" data-transition="slide" data-role="button" data-theme="d">Previous</a></li>
-                    <li><a href="#question5" data-icon="arrow-r" data-iconpos="right" data-transition="slide" data-role="button" data-theme="d">Next</a></li>
+                    <li><a href="#question3" data-transition="slide" data-direction="reverse"><span class="glyphicon glyphicon-arrow-left"></span>Previous</a></li>
+                    <li><a href="#overview" data-transition="slideup"><span class="glyphicon glyphicon-list"></span>Overview</a></li>
+                    <li><a href="#question5" data-iconpos="right" data-transition="slide">Next <span class="glyphicon glyphicon-arrow-right"></span></a></li>
                 </ul>
-            </div>
-            <div data-role="navbar">
-                <ul>
-                    <li><a href="#overview" data-icon="bars" data-transition="slideup" data-role="button" data-theme="d">Overview</a></li>
-                </ul>
-            </div>
+            </nav>
         </footer>
     </section>
     <section data-role="page" id="question5">
-        <header data-role="header" data-position="fixed">
+        <header class="navbar navbar-default navbar-fixed-top">
             <h1>ContiQuiz</h1>
         </header>
         <section data-role="content" class="container">
             <div>
-                <p class="title">Keywords</p>
-                <label class="introData">Which words are reserved identifiers in .NET 4.0</label>
+                <h2>Keywords</h2>
+                <p class="introData">Which words are reserved identifiers in .NET 4.0?</p>
             </div>
 
-            <div data-role="controlgroup" data-theme="a" class="answers">
-                <input type="checkbox" data-theme="a" name="radio-choice-v-2" id="radio12" value="1">
+            <div data-role="controlgroup" class="answers">
+                <input type="checkbox" name="radio-choice-v-2" id="radio12" value="1">
                 <label for="radio12">implements</label>
-                <input type="checkbox" data-theme="a" name="radio-choice-v-2" id="radio13" value="2">
+                <input type="checkbox" name="radio-choice-v-2" id="radio13" value="2">
                 <label for="radio13">abstract</label>
-                <input type="checkbox" data-theme="a" name="radio-choice-v-2" id="radio14" value="3">
+                <input type="checkbox" name="radio-choice-v-2" id="radio14" value="3">
                 <label for="radio14">extern</label>
-                <input type="checkbox" data-theme="a" name="radio-choice-v-2" id="radio15" value="4">
+                <input type="checkbox" name="radio-choice-v-2" id="radio15" value="4">
                 <label for="radio15">implicit</label>
 
             </div>
         </section>
         <footer data-role="footer" data-position="fixed">
-            <div data-role="navbar">
+            <nav data-role="navbar">
                 <ul>
-                    <li><a href="#question4" data-direction="reverse" data-icon="arrow-l" data-transition="slide" data-role="button" data-theme="d">Previous</a></li>
-                    <li><a href="#overview" data-icon="check" data-iconpos="right" data-transition="slide" data-role="button" data-theme="b">Finish</a></li>
+                    <li><a href="#question4" data-transition="slide" data-direction="reverse"><span class="glyphicon glyphicon-arrow-left"></span>Previous</a></li>
+                    <li><a href="#overview" data-transition="slideup"><span class="glyphicon glyphicon-list"></span>Overview</a></li>
+                    <li><a href="#overview" data-iconpos="right" class="btn-success" data-transition="slide">Finish <span class="glyphicon glyphicon-ok"></span></a></li>
                 </ul>
-            </div>
-            <div data-role="navbar">
-                <ul>
-                    <li><a href="#overview" data-icon="bars" data-transition="slideup" data-role="button" data-theme="d">Overview</a></li>
-                </ul>
-            </div>
+            </nav>
         </footer>
     </section>
     <section data-role="page" id="overview">
-        <header data-role="header" data-position="fixed">
+        <header class="navbar navbar-default navbar-fixed-top">
             <h1>ContiQuiz</h1>
         </header>
         <section data-role="content" class="container">
             <div>
-                <p class="title">Overview</p>
+                <h2>Overview</h2>
             </div>
 
-            <div data-role="controlgroup" data-theme="a" class="answers">
-                <a data-direction="reverse" data-theme="a" data-transition="slideup" data-icon="check" href="#question1" data-role="button" data-shadow="true">Datatypes</a>
-                <a data-direction="reverse" data-theme="a" data-transition="slideup" data-icon="check" href="#question2" data-role="button" data-shadow="true">Object initialization</a>
-                <a data-direction="reverse" data-theme="a" data-transition="slideup" data-icon="delete" href="#question3" data-role="button" data-shadow="true">Varia</a>
-                <a data-direction="reverse" data-theme="a" data-transition="slideup" data-icon="check" href="#question4" data-role="button" data-shadow="true">Compile</a>
-                <a data-direction="reverse" data-theme="a" data-transition="slideup" data-icon="check" href="#question5" data-role="button" data-shadow="true">Keywords</a>
+            <div data-role="controlgroup" class="answers">
+                <a data-direction="reverse" data-transition="slideup" data-icon="check" href="#question1" data-role="button" >Datatypes</a>
+                <a data-direction="reverse" data-transition="slideup" data-icon="check" href="#question2" data-role="button" >Object initialization</a>
+                <a data-direction="reverse" data-transition="slideup" data-icon="delete" href="#question3" data-role="button">Varia</a>
+                <a data-direction="reverse" data-transition="slideup" data-icon="check" href="#question4" data-role="button" >Compile</a>
+                <a data-direction="reverse" data-transition="slideup" data-icon="check" href="#question5" data-role="button" >Keywords</a>
             </div>
         </section>
         <footer data-role="footer" data-position="fixed">
-            <div data-role="navbar">
+            <nav data-role="navbar">
                 <ul>
-                    <li><a href="#question5" data-direction="reverse" data-icon="arrow-l" data-transition="slide" data-role="button" data-theme="d">Previous</a></li>
-                    <li><a href="#save" data-icon="gear" data-iconpos="right" data-transition="slide" data-role="button" data-theme="b">Save</a></li>
+                    <li><a href="#question5" data-transition="slide" data-direction="reverse"><span class="glyphicon glyphicon-arrow-left"></span>Previous</a></li>
+                    <li><a href="#save" data-transition="slideup">Save <span class="glyphicon glyphicon-floppy-disk"></span></a></li>
                 </ul>
-            </div>
-
+            </nav>
         </footer>
     </section>
     <section data-role="page" id="save">
-        <header data-role="header" data-position="fixed">
+        <header class="navbar navbar-default navbar-fixed-top">
             <h1>ContiQuiz</h1>
         </header>
         <section data-role="content" class="container">
             <div>
-                <p class="title">Thank you</p>
-                <label class="introData">Your results have been forwarded to Continuum!</label>
+                <h2>Thank you</h2>
+                <p class="introData">Your results have been forwarded to Continuum!</p>
             </div>
         </section>
-        <footer data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><a href="#" data-role="button" data-theme="c">Don't call us, we'll call you!</a></li>
-                </ul>
-            </div>
-
+        <footer class="navbar navbar-fixed-bottom">
+            <a href="#" id="quit" class="center-block  btn btn-danger btn-lg" data-transition="slide">Don't call us, we'll call you</a>
         </footer>
     </section>
 </body>

@@ -1,3 +1,10 @@
-﻿function navigateTo(sectionId,transition) {
-    $.mobile.changePage(sectionId, { transition: transition });
+﻿$(function() {
+    document.addEventListener("deviceready", onDeviceReady, true);
+});
+
+function onDeviceReady() {
+    $("#quit").click(function () {
+        if(navigator)
+            navigator.app.exitApp();
+    });
 }
